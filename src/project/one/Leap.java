@@ -1,27 +1,23 @@
 package project.one;
 
-public class Leap {
-    /**
-     * year in YYYY.
-     */
-    private int year;
+public final class CheckYear {
+    private CheckYear() {
+        super();
+    }
     /**
      *
-     * @return class year
+     * @param args
      */
-    public int getYear() {
-        return this.year;
-    }
-    Leap(final int newYear) {
-        this.year = newYear;
-    }
-    final boolean isLeapYear() {
-        final int num1 = 400;
-        final int num2 = 100;
-        final int num3 = 4;
-        return (this.year % num3 == 0)
-                && (this.year % num2 != 0 || this.year % num1 == 0);
+    /**
+     * @param args
+     */
+    public static void main(final String[] args) {
+        final int year = 2001;
+        Leap newYear = new Leap(year);
+        if (newYear.isLeapYear()) {
+            System.out.println(newYear.getYear() + " is a leap year");
+        } else {
+            System.out.println(newYear.getYear() + " is not a leap year");
+        }
     }
 }
-
-
