@@ -1,6 +1,6 @@
 package project.one;
 
-public class Leap {
+public class CheckYear {
     /**
      * year in YYYY.
      */
@@ -12,7 +12,7 @@ public class Leap {
     public int getYear() {
         return this.year;
     }
-    Leap(final int newYear) {
+    CheckYear(final int newYear) {
         this.year = newYear;
     }
     final boolean isLeapYear() {
