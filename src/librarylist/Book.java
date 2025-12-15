@@ -11,14 +11,17 @@ public class Book {
         this.author = author;
         this.yearPublished = yearPublish;
         this.isRented = false;
+        
+        System.out.println(this.title + " " + this.author + " " + this.yearPublished);
     }
 
     public boolean isRented() {
         return isRented;
     }
 
-    public void setRented(boolean isRented) {
+    public void rent() {
         this.isRented = true;
+        System.out.println(this.title + " " + this.author + " " + this.yearPublished);
     }
     
     
