@@ -1,8 +1,13 @@
 package librarylist;
 
 public class NonFictionBook extends Book {
-
-    NonFictionBook(String title, String author, int yearPublish) {
+    /**
+     * @param title
+     * @param author
+     * @param yearPublish
+     */
+    NonFictionBook(final String title, final String author,
+            final int yearPublish) {
         super(title, author, yearPublish);
     }
 

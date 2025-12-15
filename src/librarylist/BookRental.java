@@ -1,36 +1,58 @@
 package librarylist;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class BookRental {
-    static ArrayList<Book> library = new ArrayList<Book>();
+public final class BookRental {
+    private BookRental() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-    static void addBooks(Book book) {
+    /**
+    *
+    */
+    private static ArrayList<Book> library = new ArrayList<Book>();
+
+    static void addBooks(final Book book) {
         library.add(book);
     }
-    
-    static void rentBooks(Book book) {
+
+    static void rentBooks(final Book book) {
         book.rent();
     }
-    
+
+    /**
+    *
+    */
     public static void clearLibrary() {
         library.clear();
     }
-    
+
+    /**
+     * @return return library size
+     */
     public static int getLibrarySize() {
         return library.size();
     }
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        addBooks(new FictionBook("The Lord of the Rings", "J.R.R. Tolkien", 1954));
-        addBooks(new FictionBook("To Kill a Mockingbird", "Harper Lee", 1960));
-        addBooks(new NonFictionBook("The Tipping Point", "M. Gladwell", 2000));
-        addBooks(new NonFictionBook("Guns, Germs, and Steel", "Jared Diamond", 1997));
-        
+    /**
+     * @param args
+     */
+    public static void main(final String[] args) {
+        final int lotr = 1954;
+        final int mocking = 1960;
+        final int tipping = 2000;
+        final int steel = 1997;
+        addBooks(new FictionBook("The Lord of the Rings", "J.R.R. Tolkien",
+                lotr));
+        addBooks(new FictionBook("To Kill a Mockingbird", "Harper Lee",
+                mocking));
+        addBooks(new NonFictionBook("The Tipping Point", "M. Gladwell",
+                tipping));
+        addBooks(new NonFictionBook("Guns, Germs, and Steel", "Jared Diamond",
+                steel));
         rentBooks(library.get(0));
         rentBooks(library.get(1));
-        
     }
 
 }

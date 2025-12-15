@@ -1,10 +1,15 @@
 package librarylist;
 
 public class FictionBook extends Book {
-
-    FictionBook(String title, String author, int yearPublish) {
+    /**
+     * @param title
+     * @param author
+     * @param yearPublish
+     */
+    FictionBook(final String title,
+            final String author,
+            final int yearPublish) {
         super(title, author, yearPublish);
-        
     }
 
 }
